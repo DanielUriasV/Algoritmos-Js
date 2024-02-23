@@ -1,0 +1,18 @@
+function LongestWord(sen) { 
+
+  //Arreglamos la cadena
+  sen = sen.trim();
+  sen = sen.replace(/[^a-zA-Z0-9 ]/g,'');
+
+  //Verificamos cual es la mas larga.
+  let longest = '';
+  var arr = sen.split(" ").forEach(word => {
+      if(word.length > longest.length) longest = word;
+  })
+
+  return longest;
+
+}
+   
+// keep this function call here 
+console.log(LongestWord(readline()));
