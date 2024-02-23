@@ -1,0 +1,12 @@
+function CodelandUsernameValidation(str) { 
+
+  const regex = /^[a-zA-Z]\w*[^_]$/;
+  if(str.lenght < 4 && str.lenght > 25) return false;
+  if(!regex.test(str)) return false;
+
+  return str; 
+
+}
+   
+// keep this function call here 
+console.log(CodelandUsernameValidation(readline()));
